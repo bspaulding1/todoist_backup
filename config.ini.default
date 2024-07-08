@@ -1,0 +1,12 @@
+[keys]
+token = TODOIST_TOKEN
+
+[directories]
+src = SOURCE_DIRECTORY
+dest = DESTINATION_DIRECTORY
+
+[files]
+prefix = TodoistBackup_
+
+[dates]
+retention_days = 180
