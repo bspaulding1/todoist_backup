@@ -10,10 +10,13 @@ import configparser
 import datetime
 import shutil
 
+# set variable to script directory
+script_dir = os.path.dirname(os.path.realpath(__file__))
+config_file = os.path.join(script_dir, 'config.ini')
 
 # get variables from a configuration file using a python library
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read(config_file)
 token = config.get('keys', 'token')
 src_dir = config.get('directories', 'src')
 dest_dir = config.get('directories', 'dest')
