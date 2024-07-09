@@ -8,6 +8,7 @@ import sys
 import subprocess
 import configparser
 import datetime
+import shutil
 
 
 # get variables from a configuration file using a python library
@@ -40,7 +41,7 @@ def move_files(src_dir, dest_dir, prefix):
         if file_name.startswith(prefix):
             src_path = os.path.join(src_dir, file_name)
             dest_path = os.path.join(dest_dir, file_name)
-            os.rename(src_path, dest_path)
+            shutil.move(src_path, dest_path)
 
 
 # delete files in directory whose file suffixes have date information older than specified date using date object
